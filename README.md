@@ -1,1 +1,1 @@
-# StockAnalysis
+# Stock Analysis Project
