@@ -16,13 +16,13 @@ class analysis:
 
     def mainLayout(self):
         #--------TopFrame------------
-        self.app_title = Label(self.TopFrame, text="Stock Risk Analyzer", font=("Times", "18"), bg='white')
+        self.app_title = Label(self.TopFrame, text="Stock Risk Analyzer", font=("Times", "18", "bold"), bg='white')
         self.app_title.grid(row=0, column=0, pady=(20,45))
         #-------LeftFrame------------
         self.current_price_text = Label(self.LeftFrame, text="Current Price", font=("Times", "14"), bg='white')
         self.current_price = Label(self.LeftFrame, textvariable=self.price_now, font=("Times", "14"), bg='white')
         self.current_price_text.grid(row=0, column=0, padx=20)
-        self.current_price.grid(row=1, column=0)
+        self.current_price.grid(row=1, column=0, pady=(0,220))
         #-------CenterFrame----------
         self.graph_text = Label(self.CenterFrame, text="Historic Trend", font=("Times", "18"), bg='white')
         self.graph_chart = Label(self.CenterFrame, width=65, height=20)
@@ -30,10 +30,10 @@ class analysis:
         self.graph_chart.grid(row=1, column=0)
         #-------RightFrame-----------
         self.risk_text = Label(self.RightFrame, text="Risk Analysis", font=("Times", "14"), bg='white')
-        self.risk_text.grid(row=0, column=0, padx=20)
+        self.risk_text.grid(row=0, column=0, padx=20,  pady=(0,250))
         #-------BottomFrame----------
         self.input_stock_text = Label(self.BottomFrame, text="Stock Name", font=("Times", "12"), bg='white')
-        self.stock_input_field = Entry(self.BottomFrame, font="Times 16 bold")
+        self.stock_input_field = Entry(self.BottomFrame, font=("Times", "16"))
         self.stock_input_field.bind('<Return>', self.stock_id_search)
         self.stock_enter_button = Button(self.BottomFrame, text=" Enter ")
         self.stock_enter_button.bind('<Button-1>', self.stock_id_search)
